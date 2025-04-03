@@ -1,16 +1,18 @@
 # ====== 模型路径相关参数 ======
 download_model_dir="${FUNASR_DOWNLOAD_MODEL_DIR:-/workspace/models}"
-model_dir="${FUNASR_MODEL_DIR:-QuadraV/sherpa-onnx-paraformer-trilingual-zh-cantonese-en}"
-online_model_dir="${FUNASR_ONLINE_MODEL_DIR:-QuadraV/speech_paraformer-large_asr_nat-zh-cantonese-en-16k-vocab8501-online-onnx}"
+model_dir="${FUNASR_MODEL_DIR:-damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx}"
+online_model_dir="${FUNASR_ONLINE_MODEL_DIR:-QuadraV/speech_paraformer-large_asr_nat-zh-cantonese-en-16k-vocab8501-online-onnx}" 
+#online_model_dir="${FUNASR_ONLINE_MODEL_DIR:-damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online-onnx}"
 vad_dir="${FUNASR_VAD_DIR:-damo/speech_fsmn_vad_zh-cn-16k-common-onnx}"
 punc_dir="${FUNASR_PUNC_DIR:-damo/punc_ct-transformer_zh-cn-common-vad_realtime-vocab272727-onnx}"
 itn_dir="${FUNASR_ITN_DIR:-thuduj12/fst_itn_zh}"
 lm_dir="${FUNASR_LM_DIR:-damo/speech_ngram_lm_zh-cn-ai-wesp-fst}"
 
 # ====== 网络和连接相关参数 ======
-port="${FUNASR_PORT:-10095}"
+port="${FUNASR_LISTEN_PORT:-10095}"
 listen_ip="${FUNASR_LISTEN_IP:-0.0.0.0}"  # 监听地址
-certfile="${FUNASR_CERTFILE:-$(pwd)/ssl_key/server.crt}"
+certfile="${FUNASR_CERTFILE:-}" # 为空时不启用ssl
+# certfile="${FUNASR_CERTFILE:-$(pwd)/ssl_key/server.crt}"
 keyfile="${FUNASR_KEYFILE:-$(pwd)/ssl_key/server.key}"
 hotword="${FUNASR_HOTWORD:-$(pwd)/websocket/hotwords.txt}"
 
@@ -26,8 +28,8 @@ io_thread_num="${FUNASR_IO_THREAD_NUM:-$(( (decoder_thread_num + multiple_io - 1
 model_thread_num="${FUNASR_MODEL_THREAD_NUM:-1}"
 
 # ====== 模型版本和加载相关参数 ======
-offline_model_revision="${FUNASR_OFFLINE_MODEL_REVISION:-master}"  # 离线模型版本
-online_model_revision="${FUNASR_ONLINE_MODEL_REVISION:-master}"   # 在线模型版本
+offline_model_revision="${FUNASR_OFFLINE_MODEL_REVISION:-}"  # 离线模型版本
+online_model_revision="${FUNASR_ONLINE_MODEL_REVISION:-}"   # 在线模型版本
 vad_revision="${FUNASR_VAD_REVISION:-}"            # VAD模型版本
 vad_quant="${FUNASR_VAD_QUANT:-true}"           # 是否加载VAD量化模型
 punc_revision="${FUNASR_PUNC_REVISION:-}"           # 标点模型版本
@@ -133,3 +135,4 @@ server_cmd_obj+="}]}"
 # 保存配置
 mkdir -p /workspace/.config
 echo "$server_cmd_obj" > /workspace/.config/server_config
+

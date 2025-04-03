@@ -10,3 +10,4 @@ RUN pip install -U  funasr~=1.2 modelscope  Flask && \
 ADD *.sh /workspace/FunASR/runtime/
 WORKDIR /workspace/FunASR/runtime
 CMD ./start.sh
+VOLUME /workspace/models

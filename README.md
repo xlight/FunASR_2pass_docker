@@ -28,7 +28,7 @@
 所有参数都可以通过环境变量进行配置，格式为 `FUNASR_参数名`，例如：
 
 ```bash
-export FUNASR_PORT=12345
+export FUNASR_LISTEN_PORT=12345
 export FUNASR_MODEL_DIR="my/custom/model"
 ./tmp.sh
 ```
@@ -51,7 +51,7 @@ export FUNASR_MODEL_DIR="my/custom/model"
 
 | 环境变量 | 默认值 | 说明 |
 |----------|--------|------|
-| FUNASR_PORT | 10095 | 监听端口 |
+| FUNASR_LISTEN_PORT | 10095 | 监听端口 |
 | FUNASR_LISTEN_IP | 0.0.0.0 | 监听地址 |
 | FUNASR_CERTFILE | $(pwd)/ssl_key/server.crt | WSS 连接的证书文件路径 |
 | FUNASR_KEYFILE | $(pwd)/ssl_key/server.key | WSS 连接的密钥文件路径 |

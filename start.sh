@@ -9,7 +9,7 @@ WS_PORT=${WS_PORT:-"10095"}
 cd /workspace/FunASR/runtime
 
 # start the websocket server
-bash run_server_2pass.sh
+bash run_server_2pass_env.sh
 
 # copy the static files to the nginx directory
 cp /workspace/FunASR/runtime/html5/static/* /var/www/html/
