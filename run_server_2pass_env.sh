@@ -73,8 +73,6 @@ cmd_args=()
 [[ -n "$io_thread_num" ]] && cmd_args+=(--io-thread-num "$io_thread_num")
 [[ -n "$port" ]] && cmd_args+=(--port "$port")
 [[ -n "$listen_ip" ]] && cmd_args+=(--listen-ip "$listen_ip")
-[[ -n "$certfile" ]] && cmd_args+=(--certfile "$certfile")
-[[ -n "$keyfile" ]] && cmd_args+=(--keyfile "$keyfile")
 [[ -n "$hotword" ]] && cmd_args+=(--hotword "$hotword")
 [[ -n "$offline_model_revision" ]] && cmd_args+=(--offline-model-revision "$offline_model_revision")
 [[ -n "$online_model_revision" ]] && cmd_args+=(--online-model-revision "$online_model_revision")
@@ -89,6 +87,8 @@ cmd_args=()
 [[ -n "$lattice_beam" ]] && cmd_args+=(--lattice-beam "$lattice_beam")
 [[ -n "$global_beam" ]] && cmd_args+=(--global-beam "$global_beam")
 [[ -n "$fst_inc_wts" ]] && cmd_args+=(--fst-inc-wts "$fst_inc_wts")
+cmd_args+=(--certfile "$certfile")
+cmd_args+=(--keyfile "$keyfile")
 
 echo "${cmd_path}/${cmd}" "${cmd_args[@]}"
 
