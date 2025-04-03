@@ -155,4 +155,4 @@ bash run_server_2pass_env.sh
 3. 检查模型路径是否正确
 4. 确保有足够的系统资源（内存、CPU）运行服务
 
-如需更多帮助，请参考 FunASR 官方文档和支持渠道。
+如需更多帮助，请参考 [FunASR 官方文档](https://github.com/modelscope/FunASR/blob/main/runtime/docs/SDK_advanced_guide_online_zh.md)和支持渠道。
