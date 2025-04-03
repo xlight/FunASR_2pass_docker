@@ -70,15 +70,15 @@ bash run_server_2pass_env.sh
 
 | 环境变量 | 默认值 | 说明 |
 |----------|--------|------|
-| FUNASR_OFFLINE_MODEL_REVISION | master | 离线模型版本 |
-| FUNASR_ONLINE_MODEL_REVISION | master | 在线模型版本 |
-| FUNASR_VAD_REVISION | - | VAD 模型版本 |
 | FUNASR_VAD_QUANT | true | 是否加载 VAD 量化模型 |
-| FUNASR_PUNC_REVISION | - | 标点模型版本 |
 | FUNASR_PUNC_QUANT | true | 是否加载标点量化模型 |
-| FUNASR_ITN_REVISION | - | ITN 模型版本 |
-| FUNASR_LM_REVISION | - | 语言模型版本 |
 | FUNASR_QUANTIZE | true | 是否加载量化 ASR 模型 |
+| FUNASR_OFFLINE_MODEL_REVISION | v2.0.5 | 离线模型版本 |
+| FUNASR_ONLINE_MODEL_REVISION | v2.0.5 | 在线模型版本 |
+| FUNASR_VAD_REVISION | v2.0.4 | VAD 模型版本 |
+| FUNASR_PUNC_REVISION | v2.0.5 | 标点模型版本 |
+| FUNASR_ITN_REVISION | v1.0.1 | ITN 模型版本 |
+| FUNASR_LM_REVISION | v1.0.2 | 语言模型版本 |
 
 ### 解码和搜索相关参数
 
