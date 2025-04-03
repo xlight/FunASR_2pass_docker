@@ -53,7 +53,7 @@ bash run_server_2pass_env.sh
 |----------|--------|------|
 | FUNASR_LISTEN_PORT | 10095 | 监听端口 |
 | FUNASR_LISTEN_IP | 0.0.0.0 | 监听地址 |
-| FUNASR_CERTFILE | $(pwd)/ssl_key/server.crt | WSS 连接的证书文件路径 |
+| FUNASR_CERTFILE | - | WSS 连接的证书文件路径，设置为空或 0 时，禁用 ssl |
 | FUNASR_KEYFILE | $(pwd)/ssl_key/server.key | WSS 连接的密钥文件路径 |
 | FUNASR_HOTWORD | $(pwd)/websocket/hotwords.txt | 热词文件路径 |
 
