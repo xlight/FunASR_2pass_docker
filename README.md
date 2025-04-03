@@ -18,7 +18,7 @@
 ### 基本用法
 
 ```bash
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 这将使用默认配置启动 FunASR WebSocket 服务器。
@@ -30,7 +30,7 @@
 ```bash
 export FUNASR_LISTEN_PORT=12345
 export FUNASR_MODEL_DIR="my/custom/model"
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 ## 支持的参数
@@ -40,8 +40,8 @@ export FUNASR_MODEL_DIR="my/custom/model"
 | 环境变量 | 默认值 | 说明 |
 |----------|--------|------|
 | FUNASR_DOWNLOAD_MODEL_DIR | /workspace/models | 从 ModelScope 下载模型的保存路径 |
-| FUNASR_MODEL_DIR | QuadraV/sherpa-onnx-paraformer-trilingual-zh-cantonese-en | ASR 模型路径 |
-| FUNASR_ONLINE_MODEL_DIR | QuadraV/speech_paraformer-large_asr_nat-zh-cantonese-en-16k-vocab8501-online-onnx | 在线 ASR 模型路径 |
+| FUNASR_MODEL_DIR | damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx | ASR 模型路径。其他：<br> * iic/SenseVoiceSmall-onnx 、 <br> * damo/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-onnx（时间戳）、  <br> * damo/speech_paraformer-large-contextual_asr_nat-zh-cn-16k-common-vocab8404-onnx（nn热词） |
+| FUNASR_ONLINE_MODEL_DIR | damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online-onnx | 在线 ASR 模型路径。  <br>  其他：QuadraV/speech_paraformer-large_asr_nat-zh-cantonese-en-16k-vocab8501-online-onnx |
 | FUNASR_VAD_DIR | damo/speech_fsmn_vad_zh-cn-16k-common-onnx | VAD 模型路径 |
 | FUNASR_PUNC_DIR | damo/punc_ct-transformer_zh-cn-common-vad_realtime-vocab272727-onnx | 标点模型路径 |
 | FUNASR_ITN_DIR | thuduj12/fst_itn_zh | ITN 模型路径 |
@@ -114,7 +114,7 @@ export FUNASR_MODEL_DIR="my/custom/model"
 ### 启动基本服务
 
 ```bash
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 ### 自定义端口和模型
@@ -123,7 +123,7 @@ export FUNASR_MODEL_DIR="my/custom/model"
 export FUNASR_PORT=12345
 export FUNASR_MODEL_DIR="custom/asr/model/path"
 export FUNASR_VAD_DIR="custom/vad/model/path"
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 ### 调整性能参数
@@ -132,7 +132,7 @@ export FUNASR_VAD_DIR="custom/vad/model/path"
 export FUNASR_DECODER_THREAD_NUM=16
 export FUNASR_MODEL_THREAD_NUM=4
 export FUNASR_MULTIPLE_IO=8
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 ### 使用非量化模型
@@ -141,7 +141,7 @@ export FUNASR_MULTIPLE_IO=8
 export FUNASR_QUANTIZE=false
 export FUNASR_VAD_QUANT=false
 export FUNASR_PUNC_QUANT=false
-./tmp.sh
+bash run_server_2pass_env.sh
 ```
 
 ## 服务配置保存
