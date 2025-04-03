@@ -120,7 +120,7 @@ bash run_server_2pass_env.sh
 ### 自定义端口和模型
 
 ```bash
-export FUNASR_PORT=12345
+export FUNASR_LISTEN_PORT=12345
 export FUNASR_MODEL_DIR="custom/asr/model/path"
 export FUNASR_VAD_DIR="custom/vad/model/path"
 bash run_server_2pass_env.sh
