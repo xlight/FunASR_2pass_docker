@@ -47,6 +47,20 @@ bash run_server_2pass_env.sh
 | FUNASR_ITN_DIR | thuduj12/fst_itn_zh | ITN 模型路径 |
 | FUNASR_LM_DIR | damo/speech_ngram_lm_zh-cn-ai-wesp-fst | 语言模型路径 |
 
+### 模型版本和加载相关参数
+
+| 环境变量 | 默认值 | 说明 |
+|----------|--------|------|
+| FUNASR_OFFLINE_MODEL_REVISION | v2.0.5 | 离线模型版本 |
+| FUNASR_ONLINE_MODEL_REVISION | v2.0.5 | 在线模型版本 |
+| FUNASR_VAD_REVISION | v2.0.4 | VAD 模型版本 |
+| FUNASR_PUNC_REVISION | v2.0.5 | 标点模型版本 |
+| FUNASR_ITN_REVISION | v1.0.1 | ITN 模型版本 |
+| FUNASR_LM_REVISION | v1.0.2 | 语言模型版本 |
+| FUNASR_VAD_QUANT | true | 是否加载 VAD 量化模型 |
+| FUNASR_PUNC_QUANT | true | 是否加载标点量化模型 |
+| FUNASR_QUANTIZE | true | 是否加载量化 ASR 模型 |
+
 ### 网络和连接相关参数
 
 | 环境变量 | 默认值 | 说明 |
@@ -65,20 +79,6 @@ bash run_server_2pass_env.sh
 | FUNASR_MULTIPLE_IO | 16 | IO 倍数 |
 | FUNASR_IO_THREAD_NUM | (decoder_thread_num + multiple_io - 1) / multiple_io | IO 线程数 |
 | FUNASR_MODEL_THREAD_NUM | 1 | 模型线程数 |
-
-### 模型版本和加载相关参数
-
-| 环境变量 | 默认值 | 说明 |
-|----------|--------|------|
-| FUNASR_VAD_QUANT | true | 是否加载 VAD 量化模型 |
-| FUNASR_PUNC_QUANT | true | 是否加载标点量化模型 |
-| FUNASR_QUANTIZE | true | 是否加载量化 ASR 模型 |
-| FUNASR_OFFLINE_MODEL_REVISION | v2.0.5 | 离线模型版本 |
-| FUNASR_ONLINE_MODEL_REVISION | v2.0.5 | 在线模型版本 |
-| FUNASR_VAD_REVISION | v2.0.4 | VAD 模型版本 |
-| FUNASR_PUNC_REVISION | v2.0.5 | 标点模型版本 |
-| FUNASR_ITN_REVISION | v1.0.1 | ITN 模型版本 |
-| FUNASR_LM_REVISION | v1.0.2 | 语言模型版本 |
 
 ### 解码和搜索相关参数
 
